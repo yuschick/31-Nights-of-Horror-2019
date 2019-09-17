@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 106 106" xml:space="preserve">
+  <title>Play</title>
+  <desc>Icon to trigger playing movie trailer</desc>
+  <style type="text/css">
+	.st0{fill:#FFFFFF;}
+  </style>
+  <polygon class="st0" points="38 31.1 38 74.9 76 53 "/>
+  <path class="st0" d="M53 12c22.6 0 41 18.4 41 41S75.6 94 53 94 12 75.6 12 53 30.4 12 53 12M53 0C23.7 0 0 23.7 0 53s23.7 53 53 53 53-23.7 53-53S82.3 0 53 0L53 0z"/>
+</svg>

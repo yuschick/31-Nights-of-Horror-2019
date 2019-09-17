@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
 import theme from './theme';
@@ -16,15 +16,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   *,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
   html, body {
     background: ${theme.colors.black};
     color: ${theme.colors.white};
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: ${theme.fonts.barlow};
     font-size: 16px;
     font-weight: 400;
     height: 100%;
@@ -38,11 +38,16 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     max-width: 100%;
   }
+
+  ul, li {
+    list-style: none;
+  }
 `;
 
 ReactDOM.render(
-  <GlobalStyle>
+  <Fragment>
+    <GlobalStyle />
     <SiteContainer />
-  </GlobalStyle>,
+  </Fragment>,
   document.getElementById('root')
 );

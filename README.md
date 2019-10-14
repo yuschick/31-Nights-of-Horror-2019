@@ -3,9 +3,9 @@
 It's no secret that I have an incredible love for horror movies. The **31 Nights of Horror** series began in 2015 as a way to work on a fun design and coding project while creating a resource for others who are unsure where to turn for good holiday horror.
 
 ### 2019 Summary
-Coming soon. **Happy Halloween!**
+Need horror movie recommendations this October? Check out my fifth annual 31 Nights of Horror calendar. Enjoy the month-long themes like High-Tide Tuesday and Witchcraft Wednesday, inline movie trailers, and links to streaming services where you can watch now; many for free! I have an incredible love for horror movies and I look forward to building this project every year.  **Happy Halloween!**
 
-<!-- [![31 Nights of Horror 2018](https://raw.githubusercontent.com/yuschick/31-Nights-of-Horror-2018/master/src/images/screenshot.gif)](http://yuschick.github.io/31-Nights-of-Horror-2018)   -->
+[![31 Nights of Horror 2019](https://raw.githubusercontent.com/yuschick/31-Nights-of-Horror-2019/master/public/screenshot.jpg)](http://yuschick.github.io/31-Nights-of-Horror-2019)
 
 ### All Calendars
 
@@ -22,7 +22,37 @@ Coming soon. **Happy Halloween!**
 - Major release cutoff date: August 2018
 
 ### Movies
-- Coming soon!
+- Jaws
+- The Craft
+- Belzebuth
+- Frozen
+- Frailty
+- Ruins
+- Raw
+- The Fog
+- Drag Me to Hell
+- Us
+- Cold Prey
+- Oculus
+- A Dark Song
+- The Silence of the Lambs
+- Triangle
+- Pyewacket
+- The Curse of La Llorona
+- Rare Exports
+- Mama
+- The Barn
+- Frontier(s)
+- 47 Meters Down
+- Black Sunday
+- Annabelle Comes Home
+- Extinction
+- Stir of Echoes
+- The House by the Cemetery
+- The Hills Have Eyes
+- Crawl
+- The Blair Witch Project
+- Halloween
 
 ## Tech Notes
 - React + Prop Types

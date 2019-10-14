@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import theme from '../../theme';
-import { ShowScore } from '../../utils/Animations';
+import { ShowScore, DelayFade } from '../../utils/Animations';
 
 const propTypes = {
   score: PropTypes.number.isRequired,
@@ -28,13 +28,15 @@ const Track = styled.div`
 
 const Score = styled.div`
   align-items: center;
-  animation: ${props => ShowScore(props.score)} 1s ease forwards;
-  background: ${props =>
+  animation: ${props => ShowScore(props.score)} 1s
+    cubic-bezier(0.35, 0.21, 0.54, 1.31) forwards;
+  background-color: ${props =>
     props.score < 7
       ? props.score < 5.7
         ? theme.colors.scoreBad
         : theme.colors.scoreMid
       : theme.colors.scoreHigh};
+  background-image: url('https://www.transparenttextures.com/patterns/black-mamba.png');
   display: flex;
   height: 15px;
   justify-content: center;
@@ -44,8 +46,10 @@ const Score = styled.div`
 `;
 
 const ScoreText = styled.span`
+  animation: ${DelayFade()} 0.25s 1s ease forwards;
   color: ${theme.colors.black};
   font-size: 0.9rem;
+  opacity: 0;
   position: absolute;
 `;
 

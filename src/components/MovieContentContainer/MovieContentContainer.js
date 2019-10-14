@@ -8,7 +8,18 @@ import IMDBIcon from '../../assets/services/imdb.jpg';
 import MovieRating from '../MovieRating/MovieRating';
 
 const propTypes = {
-  data: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    date: PropTypes.number,
+    day: PropTypes.string,
+    title: PropTypes.string,
+    release_date: PropTypes.string,
+    spoken_languages: PropTypes.arrayOf(PropTypes.shape({})),
+    releases: PropTypes.shape({}),
+    vote_average: PropTypes.number,
+    tagline: PropTypes.string,
+    overview: PropTypes.string,
+    imdb_id: PropTypes.string,
+  }).isRequired,
 };
 
 const getRating = releases => {
@@ -34,47 +45,48 @@ const trimOverview = overview => {
   return enhanced;
 };
 
-const MovieContentContainer = ({ data }) => {
-  console.log(data);
-
-  return (
-    <Container>
-      <FlexContainer>
-        <DateBlock>
-          Oct&nbsp;
-          {data.date < 10 ? `0${data.date}` : data.date}
-        </DateBlock>
-        <DayBlock>{data.day}</DayBlock>
-      </FlexContainer>
-      <MovieTitle>{data.title}</MovieTitle>
-      <DetailsGrid>
-        <MoviePoster data={data} />
-        <OverviewGrid>
-          <RatingsBar>
-            <span>{format(parseISO(data.release_date), 'yyyy')}</span>
-            <span>{getLanguages(data.spoken_languages)}</span>
-            <span>{getRating(data.releases)}</span>
-            <MovieRating score={data.vote_average} />
-          </RatingsBar>
-          <p>{trimOverview(data.overview)}</p>
-          <ServicesContainer>
-            <a
-              href={`https://www.imdb.com/title/${data.imdb_id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={IMDBIcon} alt="IMDB" />
-            </a>
-          </ServicesContainer>
-        </OverviewGrid>
-      </DetailsGrid>
-    </Container>
-  );
-};
+const MovieContentContainer = ({ data }) => (
+  <Container>
+    <FlexContainer>
+      <DateBlock>
+        Oct&nbsp;
+        {data.date < 10 ? `0${data.date}` : data.date}
+      </DateBlock>
+      <DayBlock>{data.day}</DayBlock>
+    </FlexContainer>
+    <MovieTitle>{data.title}</MovieTitle>
+    <DetailsGrid>
+      <MoviePoster data={data} />
+      <OverviewGrid>
+        <RatingsBar>
+          <span>{format(parseISO(data.release_date), 'yyyy')}</span>
+          <span>{getLanguages(data.spoken_languages)}</span>
+          <span>{getRating(data.releases)}</span>
+          <MovieRating score={data.vote_average} />
+        </RatingsBar>
+        <p>
+          <Tagline>{data.tagline}</Tagline>
+          &nbsp;
+          {trimOverview(data.overview)}
+        </p>
+        <ServicesContainer>
+          <a
+            href={`https://www.imdb.com/title/${data.imdb_id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={IMDBIcon} alt="IMDB" />
+          </a>
+        </ServicesContainer>
+      </OverviewGrid>
+    </DetailsGrid>
+  </Container>
+);
 
 const Container = styled.article`
   align-self: end;
   margin-bottom: ${theme.space.xl};
+  width: 50%;
 `;
 
 const FlexContainer = styled.div`
@@ -136,6 +148,10 @@ const RatingsBar = styled.section`
 const ServicesContainer = styled.div`
   display: grid;
   grid-gap: ${theme.space.md};
+`;
+
+const Tagline = styled.span`
+  font-style: italic;
 `;
 
 MovieContentContainer.propTypes = propTypes;

@@ -62,6 +62,7 @@ export default Object.freeze([
     backdrop: Belzebuth,
     // backdropSM: JawsSM,
     movieId: 373226,
+    trailer: 'bRi1VDcKduA',
     services: {
       netflix: '',
       hulu: '',

@@ -2,6 +2,21 @@
   "name": "31-Nights-of-Horror-2019",
   "version": "0.1.0",
   "private": true,
+  "author": "Daniel Yuschick",
+  "homepage": "https://yuschick.github.io/31-Nights-of-Horror-2019/",
+  "keywords": [
+    "react",
+    "styled-components",
+    "horror movies",
+    "halloween",
+    "31 nights of horror",
+    "2019"
+  ],
+  "description": "31 Nights of Horror is an October movie calendar giving you more than autumn chills for all 31 nights. Watch movie trailers, enjoy month-long themes, and see where you can stream the movies now!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/cli.gitgit@github.com:yuschick/31-Nights-of-Horror-2019.git"
+  },
   "dependencies": {
     "date-fns": "^2.2.1",
     "gh-pages": "^2.2.0",

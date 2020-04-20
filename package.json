@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "date-fns": "^2.2.1",
+    "gh-pages": "^2.2.0",
     "polished": "^2.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
@@ -31,7 +32,9 @@
     "start": "REACT_APP_BUILD_ENV=development react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
